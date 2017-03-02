@@ -17,7 +17,7 @@ class App extends React.Component{
 							<Header/>
 						</div>
 						<div className = "col-xs-10 col-xs-offset-1">
-							<Home name ={"User1"} sex ={"F"}/>
+							<Home name ={"User1"} initialAge ={20}/>
 						</div>
 					</div>
 				</div>
