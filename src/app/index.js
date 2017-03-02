@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from "react";
 //Importing render method for rendering purpose
 import {render} from "react-dom";
@@ -17,7 +17,7 @@ class App extends React.Component{
 							<Header/>
 						</div>
 						<div className = "col-xs-10 col-xs-offset-1">
-							<Home/>
+							<Home name ={"User1"} sex ={"F"}/>
 						</div>
 					</div>
 				</div>
@@ -27,6 +27,5 @@ class App extends React.Component{
 }
 
 render(<App/>, window.document.getElementById("app"));
-=======
-console.log("test");
->>>>>>> 4b1754a5b726a3d7d7240606bcebe37ddb156669
+
+
