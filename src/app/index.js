@@ -7,6 +7,9 @@ import {Header} from "./components/Header";
 import {Home} from "./components/Home";
 
 class App extends React.Component{
+	greeting(){
+		alert("What's Up?");
+	}
 	render(){
 		return(
 			// Use ClassName instead of class to use Boostrap since it's not HTML
@@ -17,7 +20,7 @@ class App extends React.Component{
 							<Header/>
 						</div>
 						<div className = "col-xs-10 col-xs-offset-1">
-							<Home name ={"User1"} initialAge ={20}/>
+							<Home name ={"User1"} initialAge ={20} greet={this.greeting}/>
 						</div>
 					</div>
 				</div>
