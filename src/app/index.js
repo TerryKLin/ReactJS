@@ -7,8 +7,20 @@ import {Header} from "./components/Header";
 import {Home} from "./components/Home";
 
 class App extends React.Component{
+	constructor(){
+		super();
+		this.state = {
+			homeLink:Home //Inital name of the home link
+		}
+	}
 	greeting(){
 		alert("What's Up?");
+	}
+
+	changeLinkName(newName){
+		this.setState({
+			homeLink:newName
+		});
 	}
 	render(){
 		return(
@@ -17,10 +29,15 @@ class App extends React.Component{
 				<div className = "row">
 					<div>
 						<div className = "col-xs-10 col-xs-offset-1">
-							<Header/>
+							<Header homeLink={this.state.homeLink}/>
 						</div>
 						<div className = "col-xs-10 col-xs-offset-1">
-							<Home name ={"User1"} initialAge ={20} greet={this.greeting}/>
+							<Home name ={"User1"} 
+								  initialAge ={20} 
+								  greet={this.greeting}
+								  changeLinkName={this.changeLinkName.bind(this)}
+								  initialLinkName={this.state.homeLink}
+							/>
 						</div>
 					</div>
 				</div>
